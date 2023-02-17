@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tables and Forms 2</title>
+
+  <style>
+    table, td, th {
+      border: 2px solid black;
+      border-collapse: collapse;
+    }
+    th,td{
+      padding: 15px;
+    }
+    td{
+      text-align: center;
+    }
+    table{
+      margin: 0px auto;
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 50%;
+      margin: 0px auto;
+    }
+    div{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  </style>
+
+</head>
+<body>
+  <!-- <table>
+    <caption>Health Chart</caption>
+    <thead>
+      <tr>
+        <th rowspan="2" >State of Health</th>
+        <th colspan="2" >Fasting Value</th>
+        <th>After Eating</th>
+      </tr>
+      <tr>
+        <th>Minimum</th>
+        <th>Maximum</th>
+        <th>2 hours after eating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Healthy</th>
+        <td>70</td>
+        <td>100</td>
+        <td>Less than 140</td>
+      </tr>
+      <tr>
+        <th>Pre-Diabetes</th>
+        <td>101</td>
+        <td>126</td>
+        <td>140 to 200</td>
+      </tr>
+      <tr>
+        <th>Diabetes</th>
+        <td>More than 126</td>
+        <td>N/A</td>
+        <td> More than 200</td>
+      </tr>
+    </tbody>
+  </table> -->
+  <!-- <h1>Text Formatting</h1>
+  <p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> <b>adipisicing</b> elit. At animi ex <em>nemo eligendi</em> <i>accusantium</i> quibusdam, libero nostrum. Animi quisquam veniam hic deserunt illum laborum. Asperiores nesciunt obcaecati corporis consequatur aliquam.</p>
+  <p>My Favourite Car is <del>Benz</del> Tesla.</p>
+  <p>Price : <del>1500/-</del> <mark>1200/-</mark> </p>
+  <p>Discount : <strike>10% </strike> 50%</p>
+
+  <p>(a+b) <sup>2</sup> = a<sup>2</sup>  + 2ab + b<sup>2</sup> </p>
+  <p>CaC0 <sub>3</sub></p> -->
+
+  <!-- pre tag used for displaying code in web page -->
+
+  <!-- <pre>
+    #include&lt;stdio.h&gt;
+      Void Main(){
+        int a = 10;
+        int b = 20;
+        int c;
+        c = a+b;
+        printf("sum of 2 numbers a and b =  %c",c);
+      }
+  </pre>
+
+  <code>
+    #include<stdio.h>
+      Void Main(){
+        int a = 10;
+        int b = 20;
+        int c;
+        c = a+b;
+        printf("sum of 2 numbers a and b =  %c",c);
+      }
+  </code> -->
+  <center><h1>Login Page</h1></center>
+  <fieldset>
+    <legend>Login form</legend>
+    <form action="" autocomplete="off" >
+      <div>
+        <label for="username">User Name:</label>
+        <input required type="text" id="username" placeholder="Enter your User Name" name="username" value="" >
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password"  placeholder="enter your password" >
+      </div>
+      <input type="number" min="10"  max="30" >
+      <div>
+        phone Number : 
+        <select name="countryCode" id="">
+          <option value="india">+91</option>
+          <option value="america">+225</option>
+          <option value="Nigeria">+234</option>
+        </select>
+         <input type="tel" maxlength="10" >
+      </div>
+      <input type="submit" value="Login" >
+      <input type="file">
+      <input type="range" >
+  
+      <textarea placeholder="Enter your comments here" name="" id="" cols="30" rows="10"></textarea>
+      
+  
+    </form>
+  </fieldset>
+
+</body>
+</html>
