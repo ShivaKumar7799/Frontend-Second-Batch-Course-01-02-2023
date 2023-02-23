@@ -1,0 +1,114 @@
+*{
+  margin: 0px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+#idSelector{
+  background-color: red;
+  height: 100px;
+  color: white;
+}
+.classPara{
+  color: blue;
+  margin: 10px;
+}
+h1{
+  color: gold;
+  background-color: black;
+}
+h2{
+  color: green;
+  background-color: yellow;
+}
+
+#selectingTagsInsideAnotherTag h1{
+  color: orange;
+  background-color: blue;
+}
+#selectingTagsInsideAnotherTag p{
+  color: rgb(105, 76, 105);
+  margin: 30px;
+}
+
+#selectingTagsInsideAnotherTag > h1{
+  color: rgb(0, 26, 255);
+  background-color: yellow;
+}
+
+div{
+  margin: 30px;
+  border: 3px solid red;
+}
+
+#groupSelectors h1,h6,h2{
+  color: aqua;
+  background-color: gray;
+}
+
+#para1{
+  color: gree;
+  background-color: blue;
+}
+
+.firstPara{
+  color: red;
+  background-color: yellow;
+}
+
+/* .secondPara {
+  color: green;
+  background-color: black;
+} */
+
+
+/* .firstPara.secondPara{
+  color: red;
+  background-color: black;
+} */
+/* 
+#pseudoClasses li:nth-child(even){
+  background-color: gray;
+}
+#pseudoClasses li:nth-child(odd){
+  background-color: rgb(204, 147, 147);
+} */
+
+#pseudoClasses li:first-child{
+  background-color: red;
+}
+
+#pseudoClasses li:last-child{
+  background-color: rgb(62, 125, 207);
+}
+
+#hover button{
+  background-color: red;
+  color: blue;
+  margin: 50px;
+  padding: 20px;
+  outline: 50px solid green;
+  border: 20px solid gray;
+}
+
+#hover{
+  padding: 50px;
+  background-color: black;
+}
+
+#hover button:hover{
+  background-color: blue;
+  color: red;
+}
+
+#selectNextelement p+p{
+  color: skyblue;
+}
+
+#notSelector{
+  color: red;
+}
+
+#notSelector :not(span,p){
+  color: violet;
+}
