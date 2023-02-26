@@ -1,0 +1,35 @@
+.parent{
+  background-color: bisque;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 10px;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+
+/* .parent{
+  height: 500px;
+  background-color: bisque;
+  display: flex;
+  column-gap: 5px;
+  align-items: flex-end;
+} */
+
+.child{
+  width: 200px;
+  height: 300px;
+  background-color: red;
+  padding: 10px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* #third{
+  flex-grow: 2;
+}
+#second{
+  flex-grow: 2;
+} */

@@ -1,0 +1,36 @@
+body{
+  background: linear-gradient(45deg,orange,white,green);
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+}
+
+.redBackground{
+  height: 40px;
+  width: 100px;
+  border: 1px solid red;
+  
+  /* transform: rotate(90deg); */
+
+  /* transform: translateX(300px); */
+  /* transform: translateY(-50px); */
+  /* transform: translate(-50px,-100px); */
+  /* transform: rotate(-60deg); */
+  /* transform: scaleY(3); */
+  /* margin-left: 200px;
+  margin-top: 300px;
+  transform: skewX(-30deg); */
+}
+
+.redBackground:hover{
+  width: 300px;
+  transition: width 5s ease;
+}
+
+button{
+  width: 100px;
+}
+button:hover {
+  /* height : 100px; */
+  width: 300px;
+  transition: width 5s ease;
+}
