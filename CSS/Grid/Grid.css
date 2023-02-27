@@ -1,0 +1,42 @@
+.gridParent div{
+  background-color: yellow;
+  color: blue;
+  border: 1px solid red;
+  padding: 5px;
+}
+.gridParent div:nth-child(even){
+  background-color: gray;
+}
+
+/* .gridParent{
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 10px;
+  justify-content: center;
+} */
+
+.gridParent{
+  display: grid;
+  grid-template-columns:200px repeat(10,1fr) 400px 100px;
+  grid-template-rows: repeat(10,150px);
+  gap: 10px;
+}
+
+#first{
+  grid-area: 1/1/5/2;
+  /* grid-column: 1/span2; */
+}
+
+#fourth{
+  grid-column: 2/span 2;
+}
+
+#firstrow{
+  grid-row: 5/ span 2;
+  grid-column: 1/ span 10;
+}
+
+#thirdColumn{
+  grid-column: 3/span 2;
+}

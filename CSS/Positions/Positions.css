@@ -1,0 +1,37 @@
+.relative > h2{
+  background-color: red;
+  position: relative;
+  top: 10px;
+  left: 100px;
+}
+.absolute{
+  background-color: rgb(230, 230, 44);
+}
+
+.parent {
+  position: relative;
+  display: inline;
+}
+
+.parent i{
+  position: absolute;
+  left: 40%;
+  bottom: -15px;
+}
+
+.parent input{
+  height: 50px;
+}
+
+.fixed{
+  position: fixed;
+  top: 0px;
+  right: 10px;
+  background-color: blue;
+  color: white;
+}
+
+.stickyHeading{
+  position: sticky;
+  top: 20px;
+}
