@@ -7,7 +7,7 @@
 
 function getAgeValue(){
 
-  var voterAge = window.prompt("enter your age");
+  var voterAge = document.getElementById("voterAge").value;
   console.log(voterAge)
 
   if(voterAge >= 18){
