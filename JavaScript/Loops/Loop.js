@@ -101,4 +101,5 @@ if(date > 0 && date <=31){
   holidayName = "Please enter a vaild day"
 }
 
-console.log(holidayName)
+console.log("today is ",holidayName)
+
