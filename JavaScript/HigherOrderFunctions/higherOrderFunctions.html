@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Higher Order Functions </h1>
+  <form>
+
+    <div>
+      <label>A :</label>
+      <input type="text" name ="a" id="a" value="" />
+    </div>
+
+    <div>
+      <label>B :</label>
+      <input type="text" name ="b" id="b" value="" />
+    </div>
+    <div>
+      <label>Select Operator :</label>
+      <select  id="operator" >
+        <option value="add" >Additiion</option>
+        <option value="subtract" >Subtraction</option>
+        <option value="multiply" >Multiplication</option>
+        <option value="division" >Division</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Select display output :</label>
+      <select  id="display" >
+        <option value="html" >Html</option>
+        <option value="console" >Console</option>
+        <option value="alert" >alert</option>
+      </select>
+    </div>
+
+  </form>
+  <button onclick="add()" >Add</button> 
+  <button onclick="subtract()" >Subtraction</button>
+  <button onclick="multiply()" >Multiply</button>
+
+  <div>
+    <button onclick="calculate()" >Calculate</button>
+  </div>
+
+  <h2>Result : <span id="result" ></span> </h2>
+
+  <script src="higherOrderFunctions.js">
+
+  </script>
+</body>
+</html>
