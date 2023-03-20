@@ -1,0 +1,45 @@
+const moneyPromise = new Promise( (resolve, reject) => {
+
+      setTimeout(  () => {
+        const moneyGiven = false;
+        if(moneyGiven){
+          return resolve("money given")
+
+        }
+        else {
+          return reject("money not given")
+        }
+      } , 2000  )
+
+} )
+
+console.log("first")
+// moneyPromise.then( (data) => console.log("success " + data)  ).catch( (data) => console.log("error " + data) );
+async function callPromise(){
+  try{
+    const result = await moneyPromise;
+    console.log(result)
+  }
+  catch(err){
+    console.log(err)
+  }
+}
+callPromise()
+console.log('second')
+
+function getUsersData(){
+  fetch("https://jsonplaceholder.typicode.com/users")
+  .then(data => data.json())
+  .then((result) => console.log(result,"fetch using promise") )
+  .catch(err => console.log(err))
+}
+
+getUsersData()
+
+async function getTodosData(){
+  const result = await fetch("https://jsonplaceholder.typicode.com/todos")
+  console.log(await result.json())
+}
+
+getTodosData()
+
