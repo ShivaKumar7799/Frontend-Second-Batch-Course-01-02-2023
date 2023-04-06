@@ -37,3 +37,8 @@
     transform: rotate(360deg);
   }
 }
+
+.score-board{
+  display: flex;
+  justify-content: space-around;
+}
