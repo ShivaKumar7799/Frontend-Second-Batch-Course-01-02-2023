@@ -7,6 +7,7 @@ function HomePage() {
   return (
     <div>
       <HomePageHeader />
+      {/* {HomePageHeader()} */}
       <hr />
       <HomepageBody />
       <hr />
