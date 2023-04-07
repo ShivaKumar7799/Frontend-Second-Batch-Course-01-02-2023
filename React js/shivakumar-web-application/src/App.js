@@ -3,21 +3,14 @@ import './App.css';
 import Profile from './Components/Profile/Profile';
 import Counter from './Components/useState/Counter';
 import ScoreCounter from './Components/useState/ScoreCounter';
+import UseStateMain from './Components/useState/useStateMain';
 
 function App() {
   
   return (
-    <div className='score-board' >
+    <div>
       {/* <Profile /> */}
-      {/* <Counter /> */}
-      <div>
-        <h1>India</h1>
-        <ScoreCounter />
-      </div>
-      <div>
-        <h1>Australia</h1>
-        <ScoreCounter />
-      </div>
+      <UseStateMain />
     </div>
   );
 }
