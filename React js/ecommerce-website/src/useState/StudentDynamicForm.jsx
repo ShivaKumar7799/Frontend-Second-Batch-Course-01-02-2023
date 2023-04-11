@@ -9,12 +9,12 @@ function StudentDynamicForm() {
 
   const [studentData, setStudentData] = useState(intialStudentData);
   const [allStudents, setAllStudents] = useState([])
-
+  const date = new Date()
   const studentFormSubmit = (event) => {
       event.preventDefault()
       console.log(studentData)
       setStudentData(intialStudentData)
-      setAllStudents([...allStudents, studentData])
+      setAllStudents([...allStudents, {...studentData, createdDate : date.getTime()}])
   }
 
   const handleDynamicInputFields = (event) => {
@@ -22,6 +22,12 @@ function StudentDynamicForm() {
         ...studentData,
         [event.target.name] : event.target.value
       })
+  }
+
+  const deleteStudent = (createdDate) => {
+    console.log("student deleted",createdDate)
+    const filteredStudents = allStudents.filter((item,index) => item.createdDate !== createdDate )
+    setAllStudents(filteredStudents)
   }
 
   return (
@@ -46,8 +52,15 @@ function StudentDynamicForm() {
       </div>
       <input type='submit' value="Data Submit" />
     </form>
-    {allStudents.map((item,index) => <h1>{item.studentName}</h1> )}
+    {console.log(allStudents)}
+    {allStudents.map((item,index) => <div> 
+                                      <h1> Student Name : {item.studentName} </h1>
+                                      <h3> Roll No : {item.rollNo} </h3>
+                                      <h3> Gender : {item.gender}</h3>
+                                      <button onClick={ () => deleteStudent(item.createdDate) } > Delete </button>
+                                    </div> )}
     </div>
+    
   )
 }
 
