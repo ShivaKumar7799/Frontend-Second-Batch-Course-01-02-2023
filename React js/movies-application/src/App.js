@@ -1,6 +1,7 @@
 import './App.css';
 import {useState,useEffect} from 'react'
 import axios from "axios"
+import PropsParent from './Components/Props concept/PropsParent';
 
 function App() {
   const intitalMovieDetails = {
@@ -43,7 +44,7 @@ function App() {
 
   return (
    <div>
-     <h1>Movies</h1>
+     {/* <h1>Movies</h1>
      <form onSubmit = {saveMovieDetails} >
       <div>
         <label>Movie Name :</label>
@@ -64,7 +65,8 @@ function App() {
         <h2> HeroName : {item.heroName}</h2>
         <h2> Released : {item.relasedYear} </h2>
         <button onClick={() => delteMovie(item.id)} >Delete</button>
-      </div> )}
+      </div> )} */}
+      <PropsParent />
    </div>
   );
 }
