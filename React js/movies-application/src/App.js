@@ -2,6 +2,7 @@ import './App.css';
 import {useState,useEffect} from 'react'
 import axios from "axios"
 import PropsParent from './Components/Props concept/PropsParent';
+import DisplayMovieTable from './Components/DisplayMovieTable/DisplayMovieTable';
 
 function App() {
   const intitalMovieDetails = {
@@ -14,7 +15,6 @@ function App() {
 
   const getMoviesData = () => {
     axios.get("https://6434d93c83a30bc9ad5254ed.mockapi.io/movies").then(response => setMoviesData(response.data))
-    // getMoviesData()
   }
 
   useEffect(() => {
@@ -44,7 +44,7 @@ function App() {
 
   return (
    <div>
-     {/* <h1>Movies</h1>
+     <h1>Movies</h1>
      <form onSubmit = {saveMovieDetails} >
       <div>
         <label>Movie Name :</label>
@@ -60,13 +60,14 @@ function App() {
       </div>
       <input type="submit" value ="Save" />
      </form>
-     {moviesData.map((item,index) => <div style={{border : "1px solid red", margin : "10px", padding : "10px"}} key={item.id} > 
+     {/* {moviesData.map((item,index) => <div style={{border : "1px solid red", margin : "10px", padding : "10px"}} key={item.id} > 
         <h1> Movie Name : {item.movieName} </h1>
         <h2> HeroName : {item.heroName}</h2>
         <h2> Released : {item.relasedYear} </h2>
         <button onClick={() => delteMovie(item.id)} >Delete</button>
       </div> )} */}
-      <PropsParent />
+      <DisplayMovieTable movies = {moviesData} delteMovie = {delteMovie} />
+      {/* <PropsParent /> */}
    </div>
   );
 }
