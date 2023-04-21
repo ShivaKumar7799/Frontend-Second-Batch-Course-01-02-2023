@@ -19,8 +19,8 @@ function App() {
       <BrowserRouter>
       <NavBar />
         <Routes>
-          <Route path="/" element = {<HomePage />} />
-          <Route path="hooks" element = {<Hooks />} >
+            <Route path="/" element = {<HomePage />} />
+            <Route path="hooks" element = {<Hooks />} >
             <Route path ="useState" element = {<UseState />} />
             <Route path ="useEffect" element = {<UseEffect />} />
             <Route path ="useRef" element = {<UseRef />} />
