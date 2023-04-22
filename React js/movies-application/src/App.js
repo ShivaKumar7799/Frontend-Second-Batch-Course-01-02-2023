@@ -12,6 +12,7 @@ function App() {
   }
   const [movieDetails, setMovieDetials] = useState(intitalMovieDetails)
   const [moviesData, setMoviesData] = useState([])
+  const [selectedMovies, setSelectedMovies] = useState([])
 
   const getMoviesData = () => {
     axios.get("https://6434d93c83a30bc9ad5254ed.mockapi.io/movies").then(response => setMoviesData(response.data))
@@ -39,7 +40,18 @@ function App() {
 
   const delteMovie = (id) => {
      axios.delete(`https://6434d93c83a30bc9ad5254ed.mockapi.io/movies/${id}`).then(() => getMoviesData())
- 
+  }
+
+  const validateComplete = () => {
+    const valid = moviesData.filter((item) => item.checked == true )
+    return valid.length > 0 ? true : false
+  }
+
+  const updateMarkComplete = () => {
+    const newData = moviesData.filter((item) => item.checked == true )
+    setSelectedMovies(newData)
+    const newDeletedData = moviesData.filter((item,index) => item.checked == false )
+    setMoviesData(newDeletedData)
   }
 
   return (
@@ -66,8 +78,12 @@ function App() {
         <h2> Released : {item.relasedYear} </h2>
         <button onClick={() => delteMovie(item.id)} >Delete</button>
       </div> )} */}
-      <DisplayMovieTable movies = {moviesData} delteMovie = {delteMovie} />
+      <DisplayMovieTable selectedMovies = {selectedMovies} setSelectedMovies = {setSelectedMovies} setMoviesData = {setMoviesData} movies = {moviesData} delteMovie = {delteMovie} />
+       {validateComplete() && <button onClick={updateMarkComplete} >Mark Complete</button> } 
       {/* <PropsParent /> */}
+      {
+        selectedMovies.map((item,index) => <h1>{item.movieName}</h1> )
+      }
    </div>
   );
 }

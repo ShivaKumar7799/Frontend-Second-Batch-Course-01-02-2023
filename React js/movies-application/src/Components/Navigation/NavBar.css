@@ -1,0 +1,24 @@
+.nav-item{
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  background-color: blue;
+  border-radius: 8px;
+}
+.nav-item:hover {
+  background-color: white;
+  color: blue;
+}
+
+.activeItem {
+  background-color: white;
+  color: blue;
+}
+
+.nav-container {
+  background-color: black;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
