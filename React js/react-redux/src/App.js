@@ -3,6 +3,7 @@ import {connect } from "react-redux";
 import { incrementCounter,decrementCounter } from "./redux/actions/counterActions";
 import CounterComponent from "./Components/CounterComponent";
 import UserComponent from "./Components/UserComponent";
+import FormikLogin from "./Components/formikLogin";
 
 function App(props) {
   const {counter,incrementCounter, decrementCounter} = props
@@ -14,6 +15,8 @@ function App(props) {
     <button onClick={decrementCounter} >Dec</button>
     <CounterComponent />
     <UserComponent />
+    <hr />
+    <FormikLogin />
    </div>
   );
 }
