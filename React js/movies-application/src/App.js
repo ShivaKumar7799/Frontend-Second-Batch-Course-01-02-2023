@@ -3,8 +3,17 @@ import {useState,useEffect} from 'react'
 import axios from "axios"
 import PropsParent from './Components/Props concept/PropsParent';
 import DisplayMovieTable from './Components/DisplayMovieTable/DisplayMovieTable';
-
+import { useNavigate } from 'react-router-dom';
 function App() {
+  const token = localStorage.getItem("token")
+  const navigate = useNavigate()
+  useEffect(() => {
+    if(!token){
+      navigate("/login")
+      return
+    }
+  },[])
+ 
   const intitalMovieDetails = {
     movieName : "",
     heroName : "",

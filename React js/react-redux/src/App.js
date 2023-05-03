@@ -16,7 +16,7 @@ function App(props) {
     <CounterComponent />
     <UserComponent />
     <hr />
-    <FormikLogin />
+    {/* <FormikLogin /> */}
    </div>
   );
 }

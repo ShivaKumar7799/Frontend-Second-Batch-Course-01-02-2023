@@ -4,6 +4,7 @@ import App from './App'
 import NavBar from './Components/Navigation/NavBar'
 import Search from './Components/search/Search'
 import Images from './Components/Images/Images'
+import Login from './Components/Login/Login'
 function MoviesMainApp() {
   return (
     <div>
@@ -16,6 +17,7 @@ function MoviesMainApp() {
           <Route path = "/checkbox" element = {<h1>Checkbox</h1>} />
           <Route path = "/images" element = {<Images />} />
           <Route path = "/contact" element = {<h1>Contact</h1>} />
+          <Route path = "/login" element = {<Login />} />
         </Routes>
       </BrowserRouter>
     </div>
